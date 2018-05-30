@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B428BC5B95D6CA3AD3639B /* libPods-SJZComponentTestDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F65463388B94079E45C043F8 /* libPods-SJZComponentTestDemo.a */; };
 		991BAF0B20BE3EEA0020F251 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BAF0A20BE3EEA0020F251 /* AppDelegate.m */; };
 		991BAF0E20BE3EEA0020F251 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BAF0D20BE3EEA0020F251 /* ViewController.m */; };
 		991BAF1120BE3EEA0020F251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991BAF0F20BE3EEA0020F251 /* Main.storyboard */; };
@@ -54,6 +55,9 @@
 		991BAF2F20BE3EEB0020F251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991BAF3C20BE3F2D0020F251 /* SJZTestTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJZTestTools.h; sourceTree = "<group>"; };
 		991BAF3D20BE3F2D0020F251 /* SJZTestTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJZTestTools.m; sourceTree = "<group>"; };
+		9FC904FD1929F7A13D43B56D /* Pods-SJZComponentTestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJZComponentTestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJZComponentTestDemo/Pods-SJZComponentTestDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DE26019DCAC189B6FF355338 /* Pods-SJZComponentTestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJZComponentTestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJZComponentTestDemo/Pods-SJZComponentTestDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F65463388B94079E45C043F8 /* libPods-SJZComponentTestDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SJZComponentTestDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B428BC5B95D6CA3AD3639B /* libPods-SJZComponentTestDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B2CBC3F49EA07612024AFAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FC904FD1929F7A13D43B56D /* Pods-SJZComponentTestDemo.debug.xcconfig */,
+				DE26019DCAC189B6FF355338 /* Pods-SJZComponentTestDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		799F06455AF6AA2A29311362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F65463388B94079E45C043F8 /* libPods-SJZComponentTestDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		991BAEFD20BE3EEA0020F251 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,8 @@
 				991BAF2120BE3EEB0020F251 /* SJZComponentTestDemoTests */,
 				991BAF2C20BE3EEB0020F251 /* SJZComponentTestDemoUITests */,
 				991BAF0720BE3EEA0020F251 /* Products */,
+				5B2CBC3F49EA07612024AFAC /* Pods */,
+				799F06455AF6AA2A29311362 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 991BAF3220BE3EEB0020F251 /* Build configuration list for PBXNativeTarget "SJZComponentTestDemo" */;
 			buildPhases = (
+				61DC15DD282106ADDA3B9E6B /* [CP] Check Pods Manifest.lock */,
 				991BAF0220BE3EEA0020F251 /* Sources */,
 				991BAF0320BE3EEA0020F251 /* Frameworks */,
 				991BAF0420BE3EEA0020F251 /* Resources */,
@@ -269,6 +294,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61DC15DD282106ADDA3B9E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SJZComponentTestDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		991BAF0220BE3EEA0020F251 /* Sources */ = {
@@ -445,6 +491,7 @@
 		};
 		991BAF3320BE3EEB0020F251 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC904FD1929F7A13D43B56D /* Pods-SJZComponentTestDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +509,7 @@
 		};
 		991BAF3420BE3EEB0020F251 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE26019DCAC189B6FF355338 /* Pods-SJZComponentTestDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
